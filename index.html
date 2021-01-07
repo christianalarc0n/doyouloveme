@@ -44,14 +44,97 @@
 <p><input id="submit" class="button submit-button" type="submit" value="calculate score" /> <input id="reset" class="button" type="submit" value="clear checkbox" /></p>
 <!-- end result -->
 <div id="show">
-<p style="color: blue;">How much do you love Chris?</p>
-<h1>&nbsp;</h1>
-<div class="c"><br /><strong id="comment"></strong><br /><br />
+              <h1><p style="color:blue">I hope your score was high! :)</p></h1><p><h1><span style="color: #ff0000"><b id="score"></span></h1></b>
+              
+<div class="c">
+
+		<br><span style="color: #ff0000"><b id="comment"></span><br><br></b>
 <div class="b">
-<div id="show"><br />
-<p style="color: red;">&nbsp;</p>
-<p><br /> <br /><a href="index.html"><br /><u>Back</u> to the quiz</a></p>
-</div>
-</div>
-</div>
-</div>
+<div id="show">
+	<br><p><p style="color:red"> 
+	<br>
+	 <a><u><b></u></b></a>.<br><a><u><b></u></b></a>.<br>
+<u><b></u></b></a>.</p><br>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<br><a href="index.html"><br><u>Back</u> to the quiz</a></p></div></div>
+
+      
+
+
+        <script type="text/javascript">
+        // hides score screen
+        $("#show").hide();
+        $("#about").hide();
+        $('#submit').click(function() {
+            var check_list = document.querySelectorAll('input[type="checkbox"]:checked');
+            var check_total = check_list.length;
+            var comment;
+  	if (check_total*4 >= 0  && check_total*4 <= 10) {
+    comment = "u r a complete stranger!! leave immediately"
+     	} 
+  	if (check_total*4 > 10  && check_total*4 <= 20) {
+    comment = "hmmm do you even know me?"
+    	} 
+	if (check_total*4 > 20  && check_total*4 <= 30) {
+    comment = "we are prolly just acquaintances"
+    	}
+	if (check_total*4 > 30  && check_total*4 <= 40) {
+    comment = "nice job but not quite up there"
+    	}
+	if (check_total*4 > 40  && check_total*4 <= 50) {
+    comment = "we are prolly friends! woo hoo"
+    	}
+	if (check_total*4 > 50  && check_total*4 <= 60) {
+    comment = "we are prolly close friends!! yay"
+    	}
+	if (check_total*4 > 60  && check_total*4 <= 70) {
+    comment = "nice job -- pls call me"
+    	}
+	if (check_total*4 > 70  && check_total*4 <= 80) {
+    comment = "What a high score u are prolly one of my closest buds"
+    	}
+	if (check_total*4 > 80  && check_total*4 <= 90) {
+    comment = "that is an amazing score. this better only be carrina"
+    	}
+	if (check_total*4 > 90  && check_total*4 <= 100) {
+    comment = "you clicked #25? I will be expecting your payment soon"
+    	}
+
+
+ 
+ 
+            $('#score').html("Score: " + check_total*4 + "% Chris's Girlfriend")
+            $('#comment').html(comment)
+            $("#show").show();
+            $("#hide").hide();
+        });
+$('#reset').click(function() {
+  $('input:checkbox').removeAttr('checked');
+});
+        $('#about-click').click( function() {
+            if ($("#about").is(":visible")) {
+               $("#about").hide();
+                $('#about-click').html("learn more");
+            } else {
+               $("#about").show();
+               $('#about-click').html("close about page");
+            }
+        });
+        
+        </script>
+           
+
+        </main>
+
+	
+        <p><br></a><br></p>
+    </body>
+</html>
