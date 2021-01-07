@@ -1,4 +1,3 @@
-# which_ss_member
-Which spooky squad member are you?
 # Just for fun
+Just making this to send to my girlfriend tonight
 # C. Alarcon 1/7/21
